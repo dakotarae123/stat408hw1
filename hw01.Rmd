@@ -1,0 +1,92 @@
+---
+title: "Homework 1"
+author: "Dakota Terry"
+date: "Due February 1, 2022 at 5:00 PM in D2L"
+output:
+ 
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Instructions
+
+Use this .Rmd file as a template for your homework. Please use D2L to turn in both the PDF output and your R Markdown file in. Your .Rmd file should compile on its own if it is downloaded by your instructor.
+
+
+## Q1. Getting to know each other.
+
+### Q1a.
+Make at least one post in our D2L Discussion boards. If you don't have any questions to post, post something that may be of interest to the class, or just write a note introducing yourself!
+
+### Q1b. 
+Answer the following questions to help me get to know you and better tailor the course to your background and goals:
+
+1. What is your major?
+Financial Engineering
+1. When do you anticipate graduating?
+May 2022! :) 
+1. What do you hope to do after graduating from MSU?
+I hope to find a job in the risk management/insurance industry and stay in Montana. 
+1. Which statistics and/or programming courses (at MSU or elsewhere) have you taken?
+Engineering Statistics and Financial Econometrics are the most statistics intensive classes I've taken at MSU, and I have also had CSCI 127, 132, and 232 as well as R-labs for each of my EFIN courses. Financial Econometrics was also conducted using R. 
+1. What do you hope to get out of this class?
+I want to be comfortable using R to solve problems, and I am excited to learn about github as this is my first time using it. 
+1. On a scale of 1 to 5, where 1 = very poor and 5 = very strong, rate your ability in... 
+    * R/RStudio: 4
+    * R Markdown: 4
+    * Git/GitHub: 2
+    * SAS: 1
+1. Is there anything else you would like your instructors to know about your background or goals for this course?
+Nothing noteworthy here. 
+
+## Q2. Practice in R.
+
+Evaluate each of the following R code chunks below and provide a written explanation about what each piece of code does. Note that the R code chunk `eval` option is set to `FALSE`. Change this option to `TRUE` when you compile your pdf.
+
+### Q2a.
+```{r, eval=TRUE}
+ski <- data.frame(ski.hill = c('Bridger Bowl','Big Sky','Red Lodge Mtn'), 
+                  new.snow = c(TRUE,FALSE,TRUE),
+                  acres = c(2000, 5800, 1600))
+```
+Explanation:
+
+This code chunk creates a data frame called "ski" which contains the name of three local ski hills as well as whether or not they have new snow and how many acres they cover. 
+
+### Q2b.
+```{r, eval=TRUE}
+ski[1, 3]
+```
+Explanation:
+
+This code chunk retrieves the data stored in the third column of the first row in the ski data frame, which is 2000 (the number of acres amassed by Bridger Bowl in this case)
+
+### Q2c.
+
+```{r, eval=TRUE}
+subset(ski, new.snow == TRUE)
+```
+Explanation:
+
+This chunk returns information about the subset of ski hills that have new snow. 
+
+### Q2d.
+
+```{r, eval=TRUE}
+max(ski$acres)
+```
+Explanation:
+
+This chunk returns the maximum number of acres of any of the ski hills in the data frame, which in this case is 5800 belonging to Big Sky.
+
+### Q2e.
+
+```{r, eval=TRUE}
+sum(ski$new.snow)
+```
+Explanation:
+
+This chunk counts the number of ski hills that have new snow. 
